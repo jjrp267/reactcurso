@@ -1,12 +1,15 @@
 import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
-
+import Blog from './components/Blog';
+import ListComponent from './components/ListComponent';
+import posts from './data/data';
 function App() {
+
+debugger;
+
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+       <ListComponent />
+       <Blog posts={posts} />,
     </div>
   );
 }
