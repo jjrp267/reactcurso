@@ -1,7 +1,7 @@
 import { Component } from 'react'
 //import PropTypes from 'prop-types';
 
-class CmpDeClase extends Component {
+class CmpDeClase extends Component <any, any> {
 
   static defaultProps = {
     nombre: 'Sandra',
