@@ -5,8 +5,8 @@ import CmpFuncion from './components/CmpFuncion';
 function App() {
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+       <CmpFuncion minombre='Pepa' />
+       <CmpDeClase nombre='Juana'/>
     </div>
   );
 }

@@ -5,16 +5,18 @@ const styles = {
   },
 };
 
-const CmpFuncion = () => {
-  const nombre = "Juan";
+const CmpFuncion = (props: any) => {
+  const nombre = "Alejandra";
   const getNombre = () => nombre;
 
   return (
     <div>
       <h1>Tipos de componentes</h1>
       <h2 style={styles.h2}>Esto es un componente funcional</h2>
-      <p>Bienvenido {getNombre()}</p>
+      <p>Nombre {getNombre()}</p>
       <input type="text" placeholder={nombre} />
+      <p>Apellidos</p>
+      <input type="text" placeholder={props.minombre} />
     </div>
   );
 };
