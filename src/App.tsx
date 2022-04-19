@@ -1,12 +1,13 @@
 import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
+import ComponentEvents from './components/ComponentEvents';
+import ComponentEvents2 from './components/ComponentEvents2';
+
 
 function App() {
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+       <ComponentEvents />
+       <ComponentEvents2 />
     </div>
   );
 }
