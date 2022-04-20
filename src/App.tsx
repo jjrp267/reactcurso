@@ -1,12 +1,12 @@
 import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
+import CmpHookEffect from './components/CmpHookEffect';
+import CmpHookState from './components/CmpHookState';
 
 function App() {
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+        <CmpHookEffect />
+        <CmpHookState />
     </div>
   );
 }
