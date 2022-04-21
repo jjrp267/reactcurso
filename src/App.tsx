@@ -1,12 +1,10 @@
 import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
+import PersonList from './components/PersonList';
 
 function App() {
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+       <PersonList />
     </div>
   );
 }
