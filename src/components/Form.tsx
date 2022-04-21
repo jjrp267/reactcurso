@@ -24,7 +24,7 @@ const Formulario = () => {
 
   return (
     <div className="container">
-      <h2>Cuestionario</h2>
+      <h2>Cuestionario (formulario controlado)</h2>
       <form onSubmit={enviarDatos}>
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
