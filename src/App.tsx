@@ -1,12 +1,18 @@
 import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
+import Container from './components/Container';
+import Container2 from './components/Container2';
+import TuEstasBien from './components/TuEstasBien';
 
 function App() {
+
+  const MyComponent = TuEstasBien(Container);
+  const MyComponent2 = TuEstasBien(Container2);
+
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+       <MyComponent />
+       <MyComponent2 />
+       
     </div>
   );
 }
