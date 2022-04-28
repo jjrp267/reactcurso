@@ -5,7 +5,8 @@ const Formulario = () => {
     nombre: "",
     apellido: "",
     descripcion: "",
-    sabor: ""
+    localizacion: "",
+    jornada: ""
   });
 
   const handleInputChange = (event: any) => {
@@ -19,7 +20,7 @@ const Formulario = () => {
 
   const enviarDatos = (event: any) => {
     event.preventDefault();
-    console.log("enviando datos..." + datos.nombre + " " + datos.apellido + " "+datos.descripcion+" "+datos.sabor);
+    console.log("enviando datos..." + datos.nombre + " " + datos.apellido + " "+datos.descripcion+" "+datos.localizacion);
   };
 
   return (
@@ -58,13 +59,49 @@ const Formulario = () => {
         </div>
         <div className="form-group">
         <label htmlFor="nombre">
-          Elige el sabor:</label>
-          <select value={datos.sabor} onChange={handleInputChange} name="sabor">
-            <option value="uva">Uva</option>
-            <option value="limon">Limón</option>
-            <option value="coco">Coco</option>
-            <option value="mango">Mango</option>
+          Elige preferencia:</label>
+          <select value={datos.localizacion} onChange={handleInputChange} name="localizacion">
+            <option value=""></option>
+            <option value="ventana">ventana</option>
+            <option value="puerta">puerta</option>
+            <option value="pasillo">pasillo</option>
           </select>
+        </div>
+        <div className="radio">
+          <label>
+            <input
+              type="radio"
+              name="jornada"
+              value="Mañana"
+              checked={datos.jornada === "Mañana"}
+              onChange={handleInputChange}
+            />
+            Male
+          </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input
+              type="radio"
+              name="jornada"
+              value="Tarde"
+              checked={datos.jornada === "Tarde"}
+              onChange={handleInputChange}
+            />
+            Female
+          </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input
+              type="radio"
+              name="jornada"
+              value="Partido"
+              checked={datos.jornada === "Partido"}
+              onChange={handleInputChange}
+            />
+            Other
+          </label>
         </div>
         <button type="submit" className="btn btn-primary">
           Enviar
@@ -74,7 +111,8 @@ const Formulario = () => {
         <p>Nombre: {datos.nombre}</p>
         <p>Apellido: {datos.apellido}</p>
         <p>Descripcion: {datos.descripcion}</p>
-        <p>Sabor: {datos.sabor}</p>
+        <p>Localizacion: {datos.localizacion}</p>
+        <p>Opcion de jornada : {datos.jornada}</p>
       </div>
     </div>
   );
