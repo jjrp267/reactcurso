@@ -1,12 +1,26 @@
-import './App.css';
-import CmpDeClase from './components/CmpDeClase';
-import CmpFuncion from './components/CmpFuncion';
+import "./App.css";
+import { ListaProductos } from "./components/ListaProductos";
+
+
+const productosCaseros = [
+  {
+    id: 500,
+    nombre: 'tomate',
+    descripcion: 'producto de ensalada',
+    precio: 120
+  },
+  {
+    id: 502,
+    nombre: 'platano',
+    descripcion: 'fruta de postre',
+    precio: 125
+  }
+];
 
 function App() {
   return (
     <div className="App">
-       <CmpFuncion />
-       <CmpDeClase />
+      <ListaProductos mProductos={productosCaseros} />
     </div>
   );
 }
