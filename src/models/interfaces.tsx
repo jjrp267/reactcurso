@@ -1,8 +1,13 @@
-interface Producto {
+
+export interface Productos {
+    mProductos: Producto[];
+  }
+
+export interface Producto {
     id: number
-    nombre: string,
+    nombre: string | undefined,
     descripcion: string,
-    precio: number,
+    precio?: number,
 }
 
-export default Producto;
+//export default Producto;

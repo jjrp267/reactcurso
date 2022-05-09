@@ -1,13 +1,8 @@
 import React from "react";
-import Producto from "../models/interfaces";
+import { Producto, Productos } from "../models/interfaces";
 import ItemProducto from "./ItemProducto";
 
-
-interface Productos {
-  mProductos: Producto[];
-}
-
-export const ListaProductos = ({mProductos}: Productos) => {
+export const ListaProductos = ({ mProductos }: Productos) => {
   return (
     <div className="Budget-Overview">
       <table>
@@ -26,9 +21,10 @@ export const ListaProductos = ({mProductos}: Productos) => {
               <h4>precio</h4>
             </td>
           </tr>
-          {mProductos.map((item : Producto) => {
+          {mProductos.map((item: Producto, index) => {
             return (
               <ItemProducto
+                key={index}
                 id={item.id}
                 nombre={item.nombre}
                 descripcion={item.descripcion}
