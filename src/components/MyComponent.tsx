@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addNote } from "../actions";
 import { NewNoteInput } from "../NewNoteInput";
-import { NotesState } from "../notesReducer";
+import { addNote } from "../redux/actions/actions";
+import { NotesState } from "../redux/reducers/notesReducer";
+
 
 function MyComponent() {
   const notes = useSelector<NotesState, NotesState["notes"]>(
