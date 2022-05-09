@@ -1,19 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, MouseEvent } from "react";
 
 class ComponentEvents extends Component {
-  arrowHandleClick = (e: any) => {
+
+  arrowHandleClick = (e: MouseEvent ) => {
     e.preventDefault();
     alert("The first link was clicked.");
   }
 
-  handleClick(e: any) {
+  handleClick(e : React.MouseEvent<HTMLAnchorElement> ) {
     e.preventDefault();
     alert("The second link was clicked.");
   }
 
   render() {
     return (
-      <div >
+    <>
       <button onClick={() => alert("It works")}>
           Click on this button
       </button><br />
@@ -23,7 +24,8 @@ class ComponentEvents extends Component {
       <a href="#" onClick={(e) => this.handleClick(e)}>
         Click second link
       </a><br />
-      </div>
+      </>
+
     );
   }
 }
