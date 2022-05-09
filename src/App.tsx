@@ -6,8 +6,8 @@ import CmpPadre from './components/CompPadre';
 function App() {
   return (
     <div className="App">
-       <CmpPadre />
-       {/* <CmpClaseCicloVida /> */}
+       {/* <CmpPadre /> */}
+      <CmpClaseCicloVida />
     </div>
   );
 }

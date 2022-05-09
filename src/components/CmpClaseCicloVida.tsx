@@ -1,9 +1,11 @@
 import { Component } from 'react'
 
-class CmpClaseCicloVida extends Component {
+class CmpClaseCicloVida extends Component <{} , {name? : number}> {
 
   constructor(props: any) {
     super(props);
+    this.state = {name:5};
+
     console.log("App>constructor", props);
   }
 
@@ -38,6 +40,7 @@ class CmpClaseCicloVida extends Component {
           <button onClick={() => this.setState({name:Math.random()})}>
             Update
           </button>
+          <p>este es el dato: {this.state.name} </p>
       </div>
     );
   }
