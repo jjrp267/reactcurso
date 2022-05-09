@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { ChangeEvent, Component } from "react";
 
 class ComponentEvents2 extends React.Component <any,any> {
 
@@ -9,7 +9,7 @@ class ComponentEvents2 extends React.Component <any,any> {
     };
   }
 
-  changeText(event: any) {
+  changeText(event: React.ChangeEvent<HTMLInputElement>) {
     this.setState({
       companyName: event.target.value,
     });
