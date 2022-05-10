@@ -8,6 +8,7 @@ class FormNoControl extends React.Component <{}, {}> {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.nombre = React.createRef();
     this.apellidos = React.createRef();
+    console.log(this.nombre);
   }
 
   handleSubmit(event: any) {

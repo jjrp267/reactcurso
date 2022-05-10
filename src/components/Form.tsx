@@ -10,8 +10,8 @@ const Formulario = () => {
   });
 
   const handleInputChange = (event: any) => {
-    console.log(event.target.name);
-    console.log(event.target.value);
+    console.log('nombre:'+ event.target.name);
+    console.log('valor:'+event.target.value);
     setDatos({
       ...datos,
       [event.target.name]: event.target.value,
@@ -76,7 +76,7 @@ const Formulario = () => {
               checked={datos.jornada === "Mañana"}
               onChange={handleInputChange}
             />
-            Male
+            Mañana
           </label>
         </div>
         <div className="radio">
@@ -88,7 +88,7 @@ const Formulario = () => {
               checked={datos.jornada === "Tarde"}
               onChange={handleInputChange}
             />
-            Female
+            Tarde
           </label>
         </div>
         <div className="radio">
@@ -100,7 +100,7 @@ const Formulario = () => {
               checked={datos.jornada === "Partido"}
               onChange={handleInputChange}
             />
-            Other
+            Partido
           </label>
         </div>
         <button type="submit" className="btn btn-primary">
