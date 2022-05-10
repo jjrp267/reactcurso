@@ -56,7 +56,8 @@ class FormValidation extends Component<any, any> {
     event.preventDefault();
     if (
       !this.isLoginValid(this.state.login) ||
-      !this.isPasswordValid(this.state.password)
+      !this.isPasswordValid(this.state.password) ||
+      !this.isEmailValid(this.state.email)
     )
       alert("Form fields are incorrect");
     else alert("Form fields correct");
