@@ -3,6 +3,8 @@ import { useState } from "react";
 const CmpHookState = () => {
   const [count, setCount] = useState(0);
 
+  const [persona, setPersona] = useState({nombre: '', apellidos: '', isActive: false});
+
   return (
     <div>
       <p>You clicked {count} times</p>
