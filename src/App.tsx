@@ -7,7 +7,7 @@ function App() {
     <div className="App">
        <Home user="admin" />
        <Home user="customer" />
-       {/* <LazyComponent /> */}
+       <LazyComponent />
     </div>
   );
 }
